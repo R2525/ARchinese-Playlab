@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GPTE1I5 : MonoBehaviour
 {
     [Header("API")]
-    public string apiKey = "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"; // <-- 替换为你的 API Key
+    public string apiKey = ""; // <-- 替换为你的 API Key
 
     [Header("Font Settings")]
     public TMP_FontAsset chineseFont; // 添加中文字体引用

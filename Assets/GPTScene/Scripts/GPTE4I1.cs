@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -218,6 +219,10 @@ public class GPTE4I1 : MonoBehaviour
 
         // 设置End变量为"1"
         End = "1";
+        if (End == "1")
+        {
+            SceneManager.LoadScene("ARScene");
+        }
 
         // 在控制台输出End变量的值
         Debug.Log("End值: " + End);

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/ARP/Scenes/StartDataResetScene.unity
+    guid: 8cec2203101b54f0698349ddc65aec01
+  - enabled: 1
     path: Assets/ARP/Scenes/ARScene.unity
     guid: 59978f67817e74e349b3a841b50e2b98
   - enabled: 1
@@ -20,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ARP/Scenes/BedRoomTalkingSummary.unity
     guid: 9bfe66ab39a1843c0b223159f27b76e1
+  - enabled: 1
+    path: Assets/ARP/Scenes/BalconyTalkingSummary.unity
+    guid: bae29b2a5b69743f291e40fb0fab2a63
+  - enabled: 1
+    path: Assets/ARP/Scenes/OutdoorTalking1.unity
+    guid: 2d145840d9e9e4111becf2f64011162a
+  - enabled: 1
+    path: Assets/ARP/Scenes/OutdoorTalking2.unity
+    guid: 2d968fc6d6a0c4918a99938f97ce3ecb
+  - enabled: 1
+    path: Assets/ARP/Scenes/OutdoorTalkingSummary.unity
+    guid: bc92cef5c3b4a4f058f5ac23010c7f36
   m_configObjects:
     AR Foundation RemoteARFoundationRemoteLoaderSettings: {fileID: 11400000, guid: e9512ff5b06e4474aa7818905ca3dc76,
       type: 2}

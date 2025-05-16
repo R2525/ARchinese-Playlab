@@ -1,3 +1,4 @@
+using System.Collections;
 using ARFoundationRemoteExamples;
 using UnityEngine;
 using Unity.XR.CoreUtils;
@@ -9,6 +10,7 @@ public class InteractWithPlacedObject : MonoBehaviour {
 
     private RaycastHit hit;
     public SequenceInfoOfInteractObj sequenceInfo;
+    
     
     void Start() {
         sequenceInfo = SequenceInfoOfInteractObj.Instance;
@@ -37,23 +39,48 @@ public class InteractWithPlacedObject : MonoBehaviour {
                         if (sequenceInfo.currentStep == 1)
                         {
                             SceneManager.LoadScene("BedRoomTalking1");
-                            
+                            Debug.Log("passed 1");
                         }
                         else if (sequenceInfo.currentStep == 2)
                         {
                             
                             SceneManager.LoadScene("BedRoomTalking2");
+                            Debug.Log("passed 2");
                         }
                         else if (sequenceInfo.currentStep == 3)
                         {
                             
+                            
+                            //SceneManager.LoadScene("BedRoomTalkingSummary");//임시
+                            
                             SceneManager.LoadScene("BedRoomTalking3");
                             
-                            
+                            Debug.Log("passed 3");
                         }
+                        else if (sequenceInfo.currentStep == 5)
+                        {
+                            SceneManager.LoadScene("OutdoorTalking1");//임시
+                            Debug.Log("passed 4");
+                        }
+                        else if (sequenceInfo.currentStep == 6)
+                        {
+                            SceneManager.LoadScene("OutdoorTalking2");//임시
+                        }
+                        
+                        
                     }
                 }
             }
         }
     }
+    public void SaveData(int step)
+    {
+        Debug.Log("💾 Saving step: " + step);
+        PlayerPrefs.SetInt("step", step);
+        
+        PlayerPrefs.Save();
+    }
+
+    
+    
 } 

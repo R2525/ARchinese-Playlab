@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GPTE2Summary : MonoBehaviour
@@ -201,6 +202,7 @@ public class GPTE2Summary : MonoBehaviour
         Debug.Log("对话完成，10秒后End变量将设置为1");
         submitButton.interactable = false;
     }
+    
 
     // 协程：延迟10秒后设置End变量并在控制台输出
     IEnumerator DelayedEndSignal()
@@ -210,6 +212,10 @@ public class GPTE2Summary : MonoBehaviour
 
         // 设置End变量为"1"
         End = "1";
+        if (End == "1")
+        {
+            SceneManager.LoadScene("ARScene");
+        }
 
         // 在控制台输出End变量的值
         Debug.Log("End值: " + End);

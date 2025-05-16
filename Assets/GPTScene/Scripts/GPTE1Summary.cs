@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
@@ -25,6 +26,8 @@ public class GPTE1Summary : MonoBehaviour
     private bool conversationEnded = false;
     private int taskStage = 1; // 1 = 第一个任务, 2 = 第二个任务
 
+    
+
     // 添加End变量，初始化为0
     private string End = "0";
 
@@ -38,9 +41,13 @@ public class GPTE1Summary : MonoBehaviour
     private string systemPrompt2 = "你是一位中文学习助手。现在进入第二个问题。\n\n你的任务是：\n1. 引导学生表达如果他是[女孩名字]，他的心情会如何\n2. 评估学生的回答是否表达了负面情绪，尤其是'不耐烦'或类似情绪（如：烦躁、生气、恼火等）\n3. 如果学生没有表达适当的情绪，提供场景化的提示：\n   - 例如：'如果你在写作业的时候，有人在窗外喧哗，你的感受是什么？'\n   - 或：'想象一下，当你需要集中注意力时，外面却很吵，你会有什么感觉？'\n\n重要：\n- 你的回答必须是纯文本\n- 使用学生在第一个问题中给女孩取的名字\n- 当学生表达了适当的负面情绪时，告诉他们回答正确\n- 五轮对话后，如果学生仍未提供合适的回答，给出例句：'如果在我温习功课的时候，有人在窗外喧哗。我会觉得很不耐烦。'";
 
     private List<ChatMessage> messages = new List<ChatMessage>();
-
+    
+    
+    private int sceneTrigger;
+    
     void Start()
     {
+        
         // 应用中文字体
         ApplyChineseFont();
 
@@ -335,6 +342,7 @@ public class GPTE1Summary : MonoBehaviour
     // 协程：延迟10秒后设置End变量并在控制台输出
     IEnumerator DelayedEndSignal()
     {
+        
         // 等待10秒
         yield return new WaitForSeconds(10f);
 
@@ -343,9 +351,15 @@ public class GPTE1Summary : MonoBehaviour
 
         // 在控制台输出End变量的值
         Debug.Log("End值: " + End + ", 女孩名字: " + girlName);
+        
         if (End == "1")
         {
+            PlayerPrefs.SetInt("cameFromGPTScene", 1);
+            PlayerPrefs.Save();
+            yield return new WaitForSeconds(0.2f);
             SceneManager.LoadScene("ARScene");
+            
+            
         }
     }
 
@@ -354,4 +368,5 @@ public class GPTE1Summary : MonoBehaviour
     {
         return girlName;
     }
+    
 }

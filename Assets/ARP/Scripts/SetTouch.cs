@@ -17,6 +17,11 @@ namespace ARFoundationRemoteExamples {
 
         void Start() {
             hasPlaced = PlayerPrefs.GetInt("hasPlaced", 0) == 1;
+            // if (hasPlaced == false)
+            // {
+            //     PlayerPrefs.DeleteAll(); //초기화
+            //     PlayerPrefs.Save();
+            // }
         }
 
         void Update() {
