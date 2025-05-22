@@ -56,7 +56,10 @@ public class InteractWithPlacedObject : MonoBehaviour {
                             SceneManager.LoadScene("BedRoomTalking3");
                             
                             Debug.Log("passed 3");
-                        }
+                        } //scene 1
+                        //sceneAutoTransition scene2
+                        
+                        
                         else if (sequenceInfo.currentStep == 5)
                         {
                             SceneManager.LoadScene("OutdoorTalking1");//임시

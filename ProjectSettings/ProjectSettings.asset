@@ -165,7 +165,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.unity.template.ar_mobile
     Standalone: com.unity.template.ar-mobile
-    iPhone: com.unity.YIHOYU-2AR
+    iPhone: com.unity.YIHOYU2AR
   buildNumber:
     Bratwurst: 0
     Standalone: 0

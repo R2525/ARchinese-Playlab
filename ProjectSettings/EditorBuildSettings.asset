@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ARP/Scenes/OutdoorTalkingSummary.unity
     guid: bc92cef5c3b4a4f058f5ac23010c7f36
+  - enabled: 1
+    path: Assets/ARP/Scenes/3.unity
+    guid: bc4d7e9c29e92ee418dee0d5fdc084ee
   m_configObjects:
     AR Foundation RemoteARFoundationRemoteLoaderSettings: {fileID: 11400000, guid: e9512ff5b06e4474aa7818905ca3dc76,
       type: 2}

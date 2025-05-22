@@ -214,7 +214,7 @@ public class GPTE2Summary : MonoBehaviour
         End = "1";
         if (End == "1")
         {
-            SceneManager.LoadScene("ARScene");
+            SceneManager.LoadScene("3");
         }
 
         // 在控制台输出End变量的值

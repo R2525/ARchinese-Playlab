@@ -125,16 +125,16 @@ public class SequenceInfoOfInteractObj : MonoBehaviour
 
             if (currentStep >= 3)
             {
-                scene1.gameObject.SetActive(false); //bedroomScene 비활성화
-                scene2.gameObject.SetActive(true);
+                scene1.gameObject.SetActive(false); 
+                scene2.gameObject.SetActive(true); //balcony
                 scene3.gameObject.SetActive(false);
                 
             }
             if (currentStep >= 4)
             {
-                scene1.gameObject.SetActive(false); //bedroomScene 비활성화
+                scene1.gameObject.SetActive(false); 
                 scene2.gameObject.SetActive(false);
-                scene3.gameObject.SetActive(true);
+                scene3.gameObject.SetActive(true);//outdoor
                 
             }
             
